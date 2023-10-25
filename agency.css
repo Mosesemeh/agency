@@ -19,6 +19,10 @@ h2{
 .text-orange{
    color: var(--orange);
 }
+.center{
+   max-width: 700px;
+   margin: 0 auto;
+}
 .subheader{
    font-size: 1rem;
    margin: 10px 0;
@@ -249,17 +253,49 @@ header svg{
    background-color: #F5F0EC;
    padding: 50px 0;
    text-align: center;
+   position: relative;
  }
  .cases-list{
    display: grid;
+   gap: 20px;
    grid-auto-flow: column;
    overscroll-behavior-x: contain;
    scroll-snap-type: x mandatory;
    overflow-x: scroll;
+   padding-bottom: 20px;
  }
  .cases-list img{
    scroll-snap-type: start;
    display: block;
-   width: 250px;
+   width: 30vw;
    max-width: none;
+   border-radius: 5px; 
  }
+ #numbers{
+   background-color: var(--purple);
+   color: #fff;
+ }
+ #numbers .columns{
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 20px;
+   text-align: center;
+   padding-top: 50px;
+   padding-bottom: 50px;
+ }
+ #numbers .columns > div{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+ #numbers div.number{
+   font-size: 2rem;
+   font-weight: 900;
+   padding-right: 5px;
+ }
+ #numbers div.label{
+   text-transform: uppercase;
+   font-size: 0.8rem; 
+ }
+ 
+ 
