@@ -291,11 +291,86 @@ header svg{
  #numbers div.number{
    font-size: 2rem;
    font-weight: 900;
-   padding-right: 5px;
+   padding-right: 10px;
  }
  #numbers div.label{
    text-transform: uppercase;
    font-size: 0.8rem; 
+   text-align: left;
  }
- 
- 
+ #why{
+   padding-top: 50px;
+   padding-bottom: 50px;
+   text-align: center;
+ }
+ .reasons{
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   margin-top: 40px;
+   gap: 20px;
+ }
+ .reason{
+   text-align: left;
+   background-color: #F5F0EC;
+   padding: 20px;
+   position: relative;
+ }
+ .reason .number{
+   font-size: 6rem;
+   position: absolute;
+   z-index: 1;
+   top: -25px;
+   right: -3px;
+   color: #fff;
+   font-weight: 900;
+ }
+ .reasons h3, .reason p{
+   position: relative;
+   z-index: 3;
+ }
+ .reasons h3{
+   text-transform: uppercase;
+   margin-bottom: 10px;
+   font-size: 1rem;
+   font-weight: 900;
+ }
+ .reason p{
+   font-size: .8rem;
+   color: #555;
+   margin-bottom: 20px;
+ }
+ #mission{
+   background-image: url(photo/tmD.jpg);
+   background-size: cover;
+   padding-top: 50px;
+   padding-bottom: 50px;
+ }
+ .boxy-columns{
+   display: grid;
+   background-color: white;
+   grid-template-columns: 1fr 1fr;
+ }
+ .boxy-columns div:first-child{
+   background: linear-gradient(135deg, #F53867 0%, #F89D28 100%);
+   color: #fff;
+   font-size: 2.6rem;
+   line-height: 4rem;
+   text-align: center;
+   display: flex;
+   align-items: center;
+ }
+ .boxy-columns div:last-child{
+   padding: 20px;
+ }
+ .boxy-columns div:last-child h2{
+   font-size: 1.4rem;
+   margin-top: 20px;
+   margin-bottom: 20px;
+ }
+ .boxy-columns div:last-child p{
+   margin-bottom: 40px;
+   font-size: .8rem;
+   line-height: 1.4rem;
+   color: #555;
+ }
+  
