@@ -10,7 +10,7 @@
     padding: 0;
 }
 img{
-   /*max-width: 100%;*/
+   max-width: 100%;
 }
 h2{
    text-transform: uppercase;
@@ -54,13 +54,31 @@ header svg{
     display: inline-block; 
     margin: 0 auto;
 }
+.icon{
+   padding-right: 20px;
+}
  header a{
     text-decoration: none;
     color: #fff;
  }
+ .lg{
+   display: block;
+   padding-left: 20px;
+   
+ }
  header a.logo{
     font-weight: bold;
     font-size: 1.4rem;
+ }
+ header span{
+   font-size: 1rem;
+   color: rgba(255, 255, 255, 0.6);
+   display: block;
+   position: absolute;
+   font-style: italic;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-weight: normal;
+   line-height: 2px;
  }
  header nav a{
     text-transform: uppercase;
@@ -144,7 +162,7 @@ header svg{
         left: -30%;
     }
  }
- div.shadow-text{
+ #intro div.shadow-text{
     position: absolute;
     top: 50px;
     font-size: 12rem;
@@ -355,9 +373,11 @@ header svg{
    color: #fff;
    font-size: 2.6rem;
    line-height: 4rem;
-   text-align: center;
+   text-align: justify;
    display: flex;
    align-items: center;
+   padding-left: 40px;
+
  }
  .boxy-columns div:last-child{
    padding: 20px;
@@ -373,4 +393,75 @@ header svg{
    line-height: 1.4rem;
    color: #555;
  }
+ #declaration{
+   background-color: #F5F0EC;
+   padding-top: 50px;
+   padding-bottom: 50px;
+ }
+ #declaration h2{
+   font-size: 1.2rem;
+ }
+ .paragrapgh{
+   color: #000;
+ }
+ .text-orange.subheader{
+   padding-bottom: 20px;
+ }
+.btn.pg{
+   background-color: #fff;
+}
+#declaration .columns{
+   display: grid;
+   grid-template-columns: 1.4fr 0.6fr;
+   gap: 50px;
+}
+.love{
+   padding-left: 100px;
+}
+.hi{
+   background-image: url(photo/ce1.avif);
+   padding-left: 50px;
+   margin: 0 auto;
+   height: 60%;
+   width: 30%;
+   border-radius: 50%;
+   position: relative;
+} 
+.hi a{
+   text-decoration: none;
+   
+}
+.hi svg{
+   position: absolute;
+   align-items: center;
+   top: 33%;
+   left: 35%;
+   right: 50%;
+   bottom: 50%;
+   fill: #fff;
+   font-size: 30px;
+}
+#team{
+  padding-top: 150px;
+  padding-bottom: 50px;
+  position: relative;
+}
+#team .shadow-text{
+  font-size: 8rem;
+  position: absolute;
+  color: rgba(0,0,0,0.1);
+  text-transform: uppercase;
+  font-weight: 900;
+  top: 50px;
+  left: 10px;
+  z-index: -1;
+}
+.members{
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+
   
