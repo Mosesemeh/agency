@@ -457,7 +457,6 @@ header svg{
   z-index: -1;
 }
 .members{
-  
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
@@ -488,5 +487,58 @@ header svg{
   height: 14px;
   fill: #888;
 }
-
+.boxy-links{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: var(--orange);
+  color: #fff;
+  position: relative;
+  top: -100px;
+}
+.boxy-links > div{
+  padding: 50px;
+}
+.boxy-links > div:first-child{
+  background: linear-gradient(135deg, #F53867 0%, #F89D28 100%);
+}
+.boxy-links > div:last-child{
+  background-color: var(--purple);
+}
+.boxy-links > div h2{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.boxy-links > div h3{
+  position: relative;
+  left: -15px;
+  font-size: .9rem;
+}
+.boxy-links > div h3:before{
+  content: '';
+  display: inline-block;
+  width: 30px;
+  height: 2px;
+  background-color: #fff;
+  margin-bottom: 4px;
+  margin-right: 10px;
+}
+footer{
+  margin-top: 100px;
+  position: relative;
+  background-color: #181818;
+  color: #fff;
+}
+.footer-info{
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr 1fr;
+  gap: 20px;
+}
+footer a.logo{
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
   
