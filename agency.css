@@ -16,6 +16,26 @@ h2{
    text-transform: uppercase;
    font-weight: 900;
 }
+.mobile-only{
+   display: none !important;
+}
+@media screen and (max-width: 700px) {
+   .mobile-only{
+      display: block !important;
+   }
+   .btn.nav-btn{
+      background-color: transparent;
+      width: 20px;
+      height: 25px;
+      text-align: center;
+      font-size: 1.3rem;
+      font-weight: normal;
+      transform: rotate(90deg);
+      position: absolute;
+      top: 10px;
+      right: 10px;
+   }
+}
 .text-orange{
    color: var(--orange);
 }
@@ -43,6 +63,17 @@ div.header-wrapper{
     justify-content: space-between;
     align-items: center;
 }
+@media screen and (max-width: 700px){
+   div.header-wrapper{
+      display: none;
+   }
+   #navCb:checked ~ div.header-wrapper{
+      display: block;
+   }
+   #navCb{
+      display: none;
+   }
+}
 header{
     position: absolute;
     z-index: 1;
@@ -54,23 +85,21 @@ header svg{
     display: inline-block; 
     margin: 0 auto;
 }
-.icon{
-   padding-right: 20px;
-}
- header a{
+header a{
     text-decoration: none;
     color: #fff;
- }
- .lg{
+}
+.lg{
    display: block;
    padding-left: 20px;
    
- }
- header a.logo{
+}
+header a.logo{
     font-weight: bold;
     font-size: 1.4rem;
- }
- header span{
+    padding-left: 20px;
+}
+header span{
    font-size: 1rem;
    color: rgba(255, 255, 255, 0.6);
    display: block;
@@ -79,13 +108,14 @@ header svg{
    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
    font-weight: normal;
    line-height: 2px;
- }
- header nav a{
+   padding-left: 20px;
+}
+header nav a{
     text-transform: uppercase;
     font-size: 0.8rem;
     padding: 8px 6px;
     position: relative;
- }
+}
  header nav a.active:after{
     content: '';
     display: inline-block;
@@ -108,6 +138,33 @@ header svg{
  }
  div.header-wrapper div:nth-child(3) a:nth-child(2){
     background-color: #2c2273;
+ }
+ @media screen and (max-width: 700px) {
+   header a.logo{
+      padding: 10px 20px;
+      position: relative;
+      display: block;
+   }
+   .header-wrapper .lg span{
+      display: block;
+      position: relative;
+      padding: 10px 20px;
+   }
+   div.header-wrapper{
+      padding-top: 50px;
+      text-align: center;
+      background-color: rgba(0,0,0,0.9);
+   }
+   div.header-wrapper nav a{
+      display: block;
+      padding: 10px 20px;
+   }
+   div.header-wrapper nav a.active{
+      color: var(--orange);
+   }
+   div.header-wrapper nav a.active:after{
+      display: none;
+   }
  }
  #intro{
     background-image: url(photo/md4.avif);
@@ -144,7 +201,8 @@ header svg{
     color: #000;
     border: 2px solid #f66003; 
     font-size: .8rem;
-    font-weight: bold;   
+    font-weight: bold;
+    background-color: #fff;   
  }
  .btn.white{
     background-color: transparent;
@@ -161,36 +219,43 @@ header svg{
     100%{
         left: -30%;
     }
- }
- #intro div.shadow-text{
+}
+#intro div.shadow-text{
     position: absolute;
     top: 50px;
     font-size: 12rem;
     color: rgba(255, 255, 255, 0.1);
     font-weight: 900;
     animation: shadow-flying 30s infinite;
- }
+}
  
- #services{
+#services{
     background-color: var(--purple);
     color: #fff;
- }
- .services-list{
+}
+.services-list{
     max-width: 700px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     padding: 50px;
- }
- .service{ 
+}
+@media screen and (max-width: 700px) {
+   .services-list{
+      grid-template-columns: 1fr;
+      padding: 40px 20px;
+      gap: 20px;
+   }
+}
+.service{ 
      display: grid;
      grid-template-columns: 50px  1fr;
- }
- .service span.number{
+}
+.service span.number{
    color: var(--orange);
    font-weight: bold;
- }
- .service span.number:after{
+}
+.service span.number:after{
    content: '';
    width: 24px;
    height: 1px; 
@@ -198,30 +263,37 @@ header svg{
    margin-bottom: 4px;
    margin-left: 10px;
    background-color: var(--orange);
- }
- .service h2{
+}
+.service h2{
    text-transform: uppercase;
    font-weight: 900;
    font-size: 1.3rem;
    margin-bottom: 7px;
- }
- .service a{
+}
+.service a{
    color: rgba(255, 255, 255, 0.5);
    text-transform: uppercase;
    font-size: .8rem;
    margin-bottom: 5px;
    text-decoration: none;
     display: block;
- }
- #about .columns{
+}
+#about .columns{
    display: grid;
    grid-template-columns: 1fr 1fr;
    gap: 20px;
    max-width: 700px;
    padding: 50px 0;
    margin: 0 auto;
- }
- .huge-with-image{
+}
+@media screen and (max-width: 700px) {
+   #about .columns{
+      grid-template-columns: 1fr;
+      padding: 30px 20px;
+      gap: 20px;
+   }
+}
+.huge-with-image{
    font-size: 10rem;
    line-height: 7.2rem;
    font-weight: 900;
@@ -230,13 +302,13 @@ header svg{
    background-clip: text;
    -webkit-background-clip: text;
    color: transparent;
- }
- #about h3{
+}
+#about h3{
    font-size: 1rem;
    margin-top: 20px;
    margin-bottom: 20px;
- }
- #about h3:before{
+}
+#about h3:before{
    content: '';
    width: 50px;
    height: 2px;
@@ -245,35 +317,40 @@ header svg{
    background-color: var(--orange);
    position: relative;
    left: -10px;
- }
- #about p{
+}
+#about p{
    font-size: .8rem;
    color: #555;
    margin-bottom: 20px;
    line-height: 1.2rem;
- }
- #clients{
+}
+#clients{
    display: grid;
    grid-template-columns: repeat(5, 1fr);
    background-color: #F5F0EC;
    gap: 1px;
- }
- #clients div{
+}
+@media screen and (max-width: 700px) {
+   #clients{
+      grid-template-columns: repeat(3, 1fr);
+   }
+}
+#clients div{
    margin-top: 1px;
    margin-bottom: 1px;
    padding: 30px;
    background-color: #fff;
- }
- #clients div img{
+}
+#clients div img{
    opacity: 0.6;
- }
- .cases{
+}
+.cases{
    background-color: #F5F0EC;
    padding: 50px 0;
    text-align: center;
    position: relative;
- }
- .cases-list{
+}
+.cases-list{
    display: grid;
    gap: 20px;
    grid-auto-flow: column;
@@ -281,59 +358,59 @@ header svg{
    scroll-snap-type: x mandatory;
    overflow-x: scroll;
    padding-bottom: 20px;
- }
- .cases-list img{
+}
+.cases-list img{
    scroll-snap-type: start;
    display: block;
    width: 30vw;
    max-width: none;
    border-radius: 5px; 
- }
- #numbers{
+}
+#numbers{
    background-color: var(--purple);
    color: #fff;
- }
- #numbers .columns{
+}
+#numbers .columns{
    display: grid;
    grid-template-columns: repeat(3, 1fr);
    gap: 20px;
    text-align: center;
    padding-top: 50px;
    padding-bottom: 50px;
- }
- #numbers .columns > div{
+}
+#numbers .columns > div{
    display: flex;
    justify-content: center;
    align-items: center;
- }
- #numbers div.number{
+}
+#numbers div.number{
    font-size: 2rem;
    font-weight: 900;
    padding-right: 10px;
- }
- #numbers div.label{
+}
+#numbers div.label{
    text-transform: uppercase;
    font-size: 0.8rem; 
    text-align: left;
- }
- #why{
+}
+#why{
    padding-top: 50px;
    padding-bottom: 50px;
    text-align: center;
- }
- .reasons{
+}
+.reasons{
    display: grid;
    grid-template-columns: 1fr 1fr 1fr;
    margin-top: 40px;
    gap: 20px;
- }
- .reason{
+}
+.reason{
    text-align: left;
    background-color: #F5F0EC;
    padding: 20px;
    position: relative;
- }
- .reason .number{
+}
+.reason .number{
    font-size: 6rem;
    position: absolute;
    z-index: 1;
@@ -341,34 +418,34 @@ header svg{
    right: -3px;
    color: #fff;
    font-weight: 900;
- }
- .reasons h3, .reason p{
+}
+.reasons h3, .reason p{
    position: relative;
    z-index: 3;
- }
- .reasons h3{
+}
+.reasons h3{
    text-transform: uppercase;
    margin-bottom: 10px;
    font-size: 1rem;
    font-weight: 900;
- }
- .reason p{
+}
+.reason p{
    font-size: .8rem;
    color: #555;
    margin-bottom: 20px;
- }
- #mission{
+}
+#mission{
    background-image: url(photo/tmD.jpg);
    background-size: cover;
    padding-top: 50px;
    padding-bottom: 50px;
- }
- .boxy-columns{
+}
+.boxy-columns{
    display: grid;
    background-color: white;
    grid-template-columns: 1fr 1fr;
- }
- .boxy-columns div:first-child{
+}
+.boxy-columns div:first-child{
    background: linear-gradient(135deg, #F53867 0%, #F89D28 100%);
    color: #fff;
    font-size: 2.6rem;
@@ -378,35 +455,35 @@ header svg{
    align-items: center;
    padding-left: 40px;
 
- }
- .boxy-columns div:last-child{
+}
+.boxy-columns div:last-child{
    padding: 20px;
- }
- .boxy-columns div:last-child h2{
+}
+.boxy-columns div:last-child h2{
    font-size: 1.4rem;
    margin-top: 20px;
    margin-bottom: 20px;
- }
- .boxy-columns div:last-child p{
+}
+.boxy-columns div:last-child p{
    margin-bottom: 40px;
    font-size: .8rem;
    line-height: 1.4rem;
    color: #555;
- }
- #declaration{
+}
+#declaration{
    background-color: #F5F0EC;
    padding-top: 50px;
    padding-bottom: 50px;
- }
- #declaration h2{
+}
+#declaration h2{
    font-size: 1.2rem;
- }
- .paragrapgh{
+}
+.paragrapgh{
    color: #000;
- }
- .text-orange.subheader{
+}
+.text-orange.subheader{
    padding-bottom: 20px;
- }
+}
 .btn.pg{
    background-color: #fff;
 }
@@ -530,8 +607,9 @@ footer{
 }
 .footer-info{
   display: grid;
-  grid-template-columns: 0.5fr 0.5fr 1fr;
+  grid-template-columns: 0.6fr 0.6fr 0.8fr;
   gap: 20px;
+  line-height: 1.6rem;
 }
 footer a.logo{
   color: #fff;
@@ -540,5 +618,24 @@ footer a.logo{
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 10px;
+}
+footer .orange{
+  color: var(--orange);
+  font-weight: bold;
+}
+.footer-info{
+  position: relative;
+  top: -35px;
+} 
+.footer-info a{
+  color: #aaa;
+  text-decoration: none;
+  display: inline-block;
+  width: 45%;
+}
+.footer-info h2{
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 16px;
 }
   
