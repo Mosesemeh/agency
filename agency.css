@@ -616,6 +616,11 @@ header nav a{
   left: 10px;
   z-index: -1;
 }
+@media screen and (max-width: 700px){
+   #team .shadow-text{
+      font-size: 6rem;
+   }
+}
 .members{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
