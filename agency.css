@@ -73,13 +73,11 @@ div.header-wrapper{
       max-height: 0;
       overflow: hidden;
       transition: max-height .3s ease;
+      padding-top: 0 !important;
    }
    #navCb:checked ~ div.header-wrapper{
       display: block;
       max-height: 500px;
-   }
-   #navCb{
-      display: none;
    }
 }
 header{
@@ -369,6 +367,7 @@ header nav a{
 @media screen and (max-width: 700px) {
    #clients{
       grid-template-columns: repeat(3, 1fr);
+      max-width: 500px;
    }
 }
 #clients div{
