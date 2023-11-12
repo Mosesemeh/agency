@@ -509,7 +509,6 @@ header nav a{
    }
    .boxy-columns{
       grid-template-columns: 1fr;
-      color: #fff;
    }
 }
 .boxy-columns div:first-child{
