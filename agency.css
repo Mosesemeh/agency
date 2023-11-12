@@ -32,6 +32,7 @@ h2{
       font-weight: normal;
       transform: rotate(90deg);
       position: absolute;
+      z-index: 100;
       top: 10px;
       right: 10px;
    }
@@ -63,12 +64,19 @@ div.header-wrapper{
     justify-content: space-between;
     align-items: center;
 }
+#navCb{
+   display: none;
+}
 @media screen and (max-width: 700px){
    div.header-wrapper{
-      display: none;
+      display: block;
+      max-height: 0;
+      overflow: hidden;
+      padding-top: 0 !important;
    }
    #navCb:checked ~ div.header-wrapper{
       display: block;
+      max-height: 500px;
    }
    #navCb{
       display: none;
@@ -173,6 +181,11 @@ header nav a{
     overflow: hidden;
     position: relative;
  }
+ @media screen and (max-width: 700px) {
+   #intro{
+      padding-bottom: 50px;
+   }
+ }
  #intro h1, #intro h2{
     color: #fff;
     text-transform: uppercase;
@@ -192,6 +205,15 @@ header nav a{
     max-width: 400px;
     margin: 0 auto;
     padding: 150px 0;
+ }
+ @media screen and (max-width: 700px) {
+   #intro-content{
+      padding: 80px 20px;
+   }
+   #intro h1{
+      font-size: 3rem;
+      line-height: 2.8rem;
+   }
  }
  .btn{
     display: inline-block;
@@ -228,7 +250,12 @@ header nav a{
     font-weight: 900;
     animation: shadow-flying 30s infinite;
 }
- 
+@media screen and (max-width: 700px) {
+   #intro div.shadow-text{
+      font-size: 7rem;
+      top: 120px;
+   }
+} 
 #services{
     background-color: var(--purple);
     color: #fff;
@@ -326,7 +353,7 @@ header nav a{
 }
 #clients{
    display: grid;
-   grid-template-columns: repeat(5, 1fr);
+   grid-template-columns: repeat(6, 1fr);
    background-color: #F5F0EC;
    gap: 1px;
 }
@@ -393,6 +420,15 @@ header nav a{
    font-size: 0.8rem; 
    text-align: left;
 }
+@media screen and (max-width: 700px) {
+   #numbers .columns > div{
+      display: block;
+   }
+   #numbers div.label, #numbers div.number{
+      text-align: center;
+      padding-right: 0;
+   }
+}
 #why{
    padding-top: 50px;
    padding-bottom: 50px;
@@ -403,6 +439,13 @@ header nav a{
    grid-template-columns: 1fr 1fr 1fr;
    margin-top: 40px;
    gap: 20px;
+}
+@media screen and (max-width: 700px) {
+   .reasons{
+      grid-template-columns: 1fr;
+      padding: 20px;
+      margin-top: 0;
+   }
 }
 .reason{
    text-align: left;
@@ -445,6 +488,14 @@ header nav a{
    background-color: white;
    grid-template-columns: 1fr 1fr;
 }
+@media screen and (max-width: 700px) {
+   #mission{
+      padding: 50px 20px;
+   }
+   .boxy-columns{
+      grid-template-columns: 1fr;
+   }
+}
 .boxy-columns div:first-child{
    background: linear-gradient(135deg, #F53867 0%, #F89D28 100%);
    color: #fff;
@@ -469,6 +520,15 @@ header nav a{
    font-size: .8rem;
    line-height: 1.4rem;
    color: #555;
+}
+@media screen and (max-width: 700px){
+   .boxy-columns div:last-child h2{
+      margin-top: 10px;
+      margin-bottom: 10px;
+   }
+   .boxy-columns div:last-child p{
+      margin-bottom: 20px;
+   }
 }
 #declaration{
    background-color: #F5F0EC;
@@ -518,10 +578,24 @@ header nav a{
    fill: #fff;
    font-size: 30px;
 }
+@media screen and (max-width: 700px){
+   #declaration{
+      padding-left: 20px;
+   }
+   .hi{
+      background-image: url(photo/ce1.avif);
+      height: 40%;
+      width: 30%;
+      border-radius: 50%;
+      position: relative;
+      left: -40px;
+   } 
+}
 #team{
   padding-top: 150px;
   padding-bottom: 50px;
   position: relative;
+  overflow: hidden;
 }
 #team .shadow-text{
   font-size: 8rem;
@@ -537,6 +611,11 @@ header nav a{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
+}
+@media screen and (max-width: 700px){
+   .members{
+      padding: 0 20px;
+   }
 }
 .role.info{
   color: var(--orange);
@@ -567,13 +646,20 @@ header nav a{
 .boxy-links{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background-color: var(--orange);
   color: #fff;
   position: relative;
   top: -100px;
 }
 .boxy-links > div{
   padding: 50px;
+}
+@media screen and (max-width: 700px) {
+   .boxy-links {
+      padding: 20px;
+    }
+   .boxy-links > div{
+      padding: 20px;
+    }
 }
 .boxy-links > div:first-child{
   background: linear-gradient(135deg, #F53867 0%, #F89D28 100%);
@@ -590,7 +676,12 @@ header nav a{
   left: -15px;
   font-size: .9rem;
 }
-.boxy-links > div h3:before{
+@media screen and (max-width: 700px) {
+   .boxy-links > div h3{
+      font-size: .7rem; 
+   }
+}
+.boxy-links > div h3:before{ 
   content: '';
   display: inline-block;
   width: 30px;
@@ -610,6 +701,12 @@ footer{
   grid-template-columns: 0.6fr 0.6fr 0.8fr;
   gap: 20px;
   line-height: 1.6rem;
+}
+@media screen and (max-width: 700px) {
+   .footer-info{
+      grid-template-columns: 1fr;
+      padding: 20px;
+   }
 }
 footer a.logo{
   color: #fff;
