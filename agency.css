@@ -19,7 +19,7 @@ h2{
 .mobile-only{
    display: none !important;
 }
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 700px) {
    .mobile-only{
       display: block !important;
    }
@@ -67,7 +67,7 @@ div.header-wrapper{
 #navCb{
    display: none;
 }
-@media screen and (max-width: 780px){
+@media screen and (max-width: 700px){
    div.header-wrapper{
       display: block;
       max-height: 0;
@@ -147,7 +147,7 @@ header nav a{
  div.header-wrapper div:nth-child(3) a:nth-child(2){
     background-color: #2c2273;
  }
- @media screen and (max-width: 780px) {
+ @media screen and (max-width: 700px) {
    header a.logo{
       padding: 10px 20px;
       position: relative;
@@ -181,7 +181,7 @@ header nav a{
     overflow: hidden;
     position: relative;
  }
- @media screen and (max-width: 780px) {
+ @media screen and (max-width: 700px) {
    #intro{
       padding-bottom: 50px;
    }
@@ -206,7 +206,7 @@ header nav a{
     margin: 0 auto;
     padding: 150px 0;
  }
- @media screen and (max-width: 780px) {
+ @media screen and (max-width: 700px) {
    #intro-content{
       padding: 80px 20px;
    }
@@ -313,7 +313,7 @@ header nav a{
    padding: 50px 0;
    margin: 0 auto;
 }
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 700px) {
    #about{
       overflow: hidden;
       padding: 20px;
@@ -334,7 +334,7 @@ header nav a{
    -webkit-background-clip: text;
    color: transparent;
 }
-@media screen and (max-width: 780px){
+@media screen and (max-width: 700px){
    .huge-with-image{
       font-size: 8rem;
    }
@@ -366,7 +366,7 @@ header nav a{
    background-color: #F5F0EC;
    gap: 1px;
 }
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 700px) {
    #clients{
       grid-template-columns: repeat(3, 1fr);
    }
@@ -429,7 +429,7 @@ header nav a{
    font-size: 0.8rem; 
    text-align: left;
 }
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 700px) {
    #numbers .columns > div{
       display: block;
    }
@@ -449,7 +449,7 @@ header nav a{
    margin-top: 40px;
    gap: 20px;
 }
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 700px) {
    .reasons{
       grid-template-columns: 1fr;
       padding: 20px;
@@ -497,7 +497,7 @@ header nav a{
    background-color: white;
    grid-template-columns: 1fr 1fr;
 }
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 700px) {
    #mission{
       padding: 50px 20px;
    }
@@ -530,7 +530,7 @@ header nav a{
    line-height: 1.4rem;
    color: #555;
 }
-@media screen and (max-width: 780px){
+@media screen and (max-width: 700px){
    .boxy-columns div:last-child h2{
       margin-top: 10px;
       margin-bottom: 10px;
@@ -587,7 +587,7 @@ header nav a{
    fill: #fff;
    font-size: 30px;
 }
-@media screen and (max-width: 780px){
+@media screen and (max-width: 700px){
    #declaration{
       padding-left: 20px;
    }
@@ -621,7 +621,7 @@ header nav a{
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
 }
-@media screen and (max-width: 780px){
+@media screen and (max-width: 700px){
    .members{
       padding: 0 20px;
    }
@@ -662,7 +662,7 @@ header nav a{
 .boxy-links > div{
   padding: 50px;
 }
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 700px) {
    .boxy-links {
       padding: 20px;
     }
@@ -685,7 +685,7 @@ header nav a{
   left: -15px;
   font-size: .9rem;
 }
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 700px) {
    .boxy-links > div h3{
       font-size: .7rem; 
    }
@@ -711,7 +711,7 @@ footer{
   gap: 20px;
   line-height: 1.6rem;
 }
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 700px) {
    .footer-info{
       grid-template-columns: 1fr;
       padding: 20px;
