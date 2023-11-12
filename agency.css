@@ -71,6 +71,7 @@ div.header-wrapper{
    div.header-wrapper{
       display: block;
       max-height: 0;
+      overflow: hidden;
       transition: max-height .3s ease;
       padding-top: 0 !important;
    }
