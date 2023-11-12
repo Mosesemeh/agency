@@ -570,11 +570,11 @@ header nav a{
 .love{
    padding-left: 100px;
 }
-@media screen and (max-width: 700px) {
+/*@media screen and (max-width: 700px) {
    #declaration{
       overflow: hidden;
    }
-}
+}*/
 .hi{
    background-image: url(photo/ce1.avif);
    padding-left: 50px;
