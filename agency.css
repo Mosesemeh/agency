@@ -367,7 +367,6 @@ header nav a{
 @media screen and (max-width: 700px) {
    #clients{
       grid-template-columns: repeat(3, 1fr);
-      max-width: 80%;
    }
 }
 #clients div{
@@ -401,6 +400,13 @@ header nav a{
    max-width: none;
    border-radius: 5px; 
 }
+@media screen and (max-width: 700px)  {
+   .cases-list{
+      max-width: 90%;
+      padding: 20px;
+   }
+}
+   
 #numbers{
    background-color: var(--purple);
    color: #fff;
