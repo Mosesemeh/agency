@@ -314,11 +314,13 @@ header nav a{
    margin: 0 auto;
 }
 @media screen and (max-width: 700px) {
+   #about{
+      overflow: hidden;
+   }
    #about .columns{
       grid-template-columns: 1fr;
       padding: 30px 20px;
       gap: 20px;
-      overflow: hidden;
    }
 }
 .huge-with-image{
